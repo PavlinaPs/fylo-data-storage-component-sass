@@ -169,8 +169,6 @@ body {
   height: 100%;
   background-image: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
   border-radius: 1rem;
-  -webkit-animation: progress 1s linear;
-          animation: progress 1s linear;
 }
 
 @-webkit-keyframes progress {
@@ -188,6 +186,20 @@ body {
   }
   100% {
     width: var(--width, 0);
+  }
+}
+/* user prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .progress-value {
+    -webkit-animation: none;
+            animation: none;
+  }
+}
+/* user hasn't set a preference, use animation */
+@media (prefers-reduced-motion: no-preference) {
+  .progress-value {
+    -webkit-animation: progress 1s linear;
+            animation: progress 1s linear;
   }
 }
 .dot {

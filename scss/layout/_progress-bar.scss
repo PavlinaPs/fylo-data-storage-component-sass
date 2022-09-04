@@ -21,7 +21,6 @@
     var(--gradient-end)
   );
   border-radius: 1rem;
-  animation: progress 1s linear;
 }
 
 @keyframes progress {
@@ -30,6 +29,20 @@
   }
   100% {
     width: var(--width, 0);
+  }
+}
+
+/* user prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .progress-value {
+    animation: none;
+  }
+}
+
+/* user hasn't set a preference, use animation */
+@media (prefers-reduced-motion: no-preference) {
+  .progress-value {
+    animation: progress 1s linear;
   }
 }
 
