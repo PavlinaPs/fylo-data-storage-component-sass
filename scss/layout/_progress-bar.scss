@@ -1,0 +1,54 @@
+@use "../abstracts" as *;
+
+.progress-bar {
+  position: relative;
+  height: 2rem;
+  width: 100%;
+  margin: 1.6rem 0 1rem;
+  padding: 0.3rem;
+  background-color: var(--darker-blue);
+  border-radius: 1rem;
+}
+
+.progress-value {
+  position: relative;
+  width: var(--width, 0);
+  min-width: 1rem;
+  height: 100%;
+  background-image: linear-gradient(
+    to right,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
+  border-radius: 1rem;
+  animation: progress 1s linear;
+}
+
+@keyframes progress {
+  0% {
+    width: 1rem;
+  }
+  100% {
+    width: var(--width, 0);
+  }
+}
+
+.dot {
+  position: absolute;
+  top: 0.15rem;
+  right: 0.3rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: var(--white);
+}
+
+.label-container {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--fs-label);
+}
+
+.label-container > label {
+  font-weight: var(--fw-bold);
+}

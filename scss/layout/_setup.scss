@@ -1,0 +1,40 @@
+@use "../abstracts/" as *;
+
+body {
+  @include flex-center;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: var(--ff);
+  font-size: var(--fs-normal);
+  font-weight: var(--fw-regular);
+  color: var(--pale-blue);
+}
+
+.storage-component {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.6rem;
+  width: 37.5rem;
+  height: 66.7rem;
+  padding-top: 12.7rem;
+  background-color: var(--very-dark-blue);
+  background-image: url("../../images/bg-mobile.png");
+}
+
+@media (min-width: $desktop) {
+  .storage-component {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    width: 144rem;
+    height: 80rem;
+    padding-top: 0;
+    background-image: url("../../images/bg-desktop.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+}

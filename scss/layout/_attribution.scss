@@ -1,0 +1,19 @@
+@use "../abstracts" as *;
+
+.attribution {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  text-align: center;
+  color: var(--very-dark-blue);
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: underline;
+}
+
+@media (min-width: $desktop) {
+  .attribution {
+    color: var(--grayish-blue);
+  }
+}

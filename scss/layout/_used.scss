@@ -1,0 +1,35 @@
+@use "../abstracts" as *;
+
+.used {
+  position: relative;
+  width: 32.5rem;
+  height: 16rem;
+  padding: 3.2rem 3.2rem;
+  background-color: var(--dark-blue);
+  border-radius: 1rem;
+}
+
+.title {
+  font-size: var(--fs-normal);
+  font-weight: var(--fw-regular);
+  text-align: center;
+  letter-spacing: 0.3px;
+}
+
+.title--bold {
+  font-weight: var(--fw-bold);
+}
+
+@media (min-width: $desktop) {
+  .used {
+    bottom: -1.2rem;
+    width: 54rem;
+    height: 15.4rem;
+    padding: 4.1rem 4rem;
+    align-self: baseline;
+  }
+
+  .title {
+    text-align: left;
+  }
+}

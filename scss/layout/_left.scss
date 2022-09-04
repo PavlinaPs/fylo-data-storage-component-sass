@@ -1,0 +1,50 @@
+@use "../abstracts" as *;
+
+.left {
+  @include flex-center;
+  gap: 1rem;
+
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -3.6rem;
+  width: 18rem;
+  height: 7.2rem;
+
+  font-weight: var(--fw-bold);
+  color: var(--grayish-blue);
+  background-color: var(--white);
+  border-radius: 1rem;
+}
+
+.left-digits {
+  top: -0.3rem;
+  color: var(--very-dark-blue);
+  font-size: var(--fs-left);
+}
+
+.description {
+  padding-top: 0.5rem;
+  font-size: var(--fs-label);
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+@media (min-width: $desktop) {
+  .left {
+    left: 41rem;
+    bottom: 12.8rem;
+  }
+
+  .left::after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 0;
+    bottom: -2.2rem;
+    border-top: 2.3rem solid transparent;
+    border-bottom: 2.3rem solid transparent;
+    border-right: 2.3rem solid var(--white);
+  }
+}

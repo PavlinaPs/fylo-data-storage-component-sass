@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A Frontend Mentor Challenge, September 2022, 2nd attempt">
+
+  <title>Frontend Mentor | Fylo data storage component</title>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./dist/css/main.css">
+
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+
+  <script defer src="./index.js"></script>
+</head>
+
+<body>
+  <div class="storage-component">
+    <header>
+      <img class="logo" src="./images/logo.svg" alt="Fylo logo">
+      <nav class="actions">
+        <button id="document" class="button">
+          <img src="./images/icon-document.svg" alt="document button" aria-label="document button">
+        </button>
+        <button id="folder" class="button">
+          <img src="./images/icon-folder.svg" alt="folder button" aria-label="folder button"></a>
+        </button>
+        <button id="upload" class="button">
+          <img src="./images/icon-upload.svg" alt="upload button" aria-label="upload button"></a>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <div class="used">
+        <h1 class="title">You’ve used
+          <span class="title--bold">
+            <span id="used"></span> GB
+          </span> of your storage
+        </h1>
+
+        <div class="progress-bar">
+          <div id="progress-value" class="progress-value">
+            <div class="dot"></div>
+          </div>
+        </div>
+
+        <div class="label-container">
+          <label for="progress-value">0 GB</label>
+          <label for="progress-value" id="available-storage"></label>
+        </div>
+
+        <div class="left">
+          <p id="left" class="left-digits"></p>
+          <p class="description">GB Left</p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </footer>
+</body>
+
+</html>

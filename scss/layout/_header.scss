@@ -1,0 +1,33 @@
+@use "../abstracts" as *;
+
+.storage-component > header {
+  width: 32.5rem;
+  height: 20rem;
+  padding: 4rem;
+  background-color: var(--dark-blue);
+  border-radius: 1rem;
+  border-top-right-radius: 10rem;
+}
+
+.actions {
+  display: flex;
+  gap: 1.6rem;
+  margin-top: 3.3rem;
+}
+
+.button {
+  @include flex-center;
+  width: 4.8rem;
+  height: 4.8rem;
+  background-color: var(--very-dark-blue);
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+@media (min-width: $desktop) {
+  .storage-component > header {
+    width: 35rem;
+    position: relative;
+    bottom: 1rem;
+  }
+}
